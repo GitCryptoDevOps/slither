@@ -40,3 +40,6 @@ RUN --mount=type=bind,target=/mnt,source=/wheels,from=python-wheels \
 
 COPY --chown=slither:slither ./install-solc.sh .
 RUN ./install-solc.sh
+
+COPY --chown=slither:slither ./run-slither.sh /usr/local/bin/run-slither
+
